@@ -1,7 +1,7 @@
 # COMP1004
 
 Password Manager:
-this is a secure and intauative passwordmanager built using html and javascript and styalised using CSS.
+this is a secure and intuative passwordmanager built using html and javascript and styalised using CSS.
 
 Key features:
 stores and helps manage login credentials , 
