@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+    
+  }
+  /* universal css */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #3a3333;
+  }
+  /* container that holds log in and sign up */
+  .loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  /* login box */
+  .loginpage{
+    display: flex;
+    flex-direction: column;
+    background-color:#554242;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.26);
+    text-decoration: none;
+  }
+  .loginpage button{
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+  }
+  .loginpage button:hover{
+    background-color: #ffffff2d;
+    color: rgb(255, 255, 255);
+  }
+  .loginpage label{
+    width: fit-content;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  .loginpage input{
+    width: max-content;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  /* sign up box  */
+  .signuppage{
+    display: none;
+    flex-direction: column;
+    background-color:#554242;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.26);
+    text-decoration: none;
+  }
+  .signuppage button{
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+  }
+  .signuppage button:hover{
+    background-color: #ffffff2d;
+    color: rgb(255, 255, 255);
+  }
+  .signuppage label{
+    width: fit-content;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  .signuppage input{
+    width: max-content;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  
+  /* holds all main manager elements */
+  .mainContainer{
+    display: none;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+
+  .button {
+    border: block;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  
+  /* Style the side navigation */
+  .sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    text-align: center;
+    border-right: 1px solid #ffffff;
+    background-color:#554242;
+    overflow-x: hidden;
+  }
+  
+  
+
+  .sidenav button {
+    background-color:#554242;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    width: 245px;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.26);
+    text-decoration: none;
+  }
+  
+
+  .sidenav button:hover {
+    background-color:#ffffffc4;
+    transition: 0.25s linear;
+    transform: scale(1.1);
+    animation: rotate 2s infinite linear;
+    color: rgb(0, 0, 0);
+  }
+
+  .sidenav h2{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+  }
+  /* the password display */
+  .password-list {
+    background-color: #3a3333;
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    right: 700px;
+    padding: 16px;
+    overflow-y: auto;
+    text-align: center;
+  }
+
+  .password-list button {
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 90%;
+  }
+  .password-list button:hover{
+    background-color: #e0e0e0;
+  }
+  /* style for the form to adda a password */
+  .add-password-form{
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    right: 700px;
+    padding: 30px;
+    background-color:#3a3333;
+    overflow-y: auto;
+  }
+  .add-password-form button{
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+  }
+  .add-password-form button:hover{
+    background-color: #ffffff2d;
+    color: rgb(255, 255, 255);
+  }
+  .add-password-form label{
+    width: fit-content;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  .add-password-form input{
+    width: max-content;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  /* top left bar */
+  .top_bar_left{
+    background-color:#aa1616;
+    height: 100px;
+    width: auto;
+    position: fixed;
+    right: 700px;
+    left: 300px;
+    top: 0;
+    border-bottom: 1px solid #ffffff;
+    
+  }
+
+  .top_bar_left button {
+    color: rgb(255, 255, 255);
+    background-color: #aa1616;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    height: 70px;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.26);
+    text-align: center;
+    display: inline-block;
+  }
+  
+  /* Change color on hover */
+  .top_bar_left button:hover {
+    background-color: #ffffff2d;
+    transition: 0.25s linear;
+    transform: scale(1.1);
+    animation: rotate 2s infinite linear;
+    color: rgb(255, 255, 255);
+  }
+  /* top right bar */
+  .top_bar_right{
+    background-color:#aa1616;
+    height: 100px;
+    width: 700px;
+    position: fixed;
+    right: 0px;
+    top: 0;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    
+  }
+
+    .top_bar_right button {
+      color: rgb(255, 255, 255);
+      background-color: #aa1616;
+      margin-top: 10px;
+      margin-left: 15px;
+      margin-right: 10px;
+      height: 70px;
+      width: 150px;
+      padding: 5px;
+      border: 1px solid #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.26);
+      text-align: center;
+      display: inline-block;
+    }
+    
+    /* Change color on hover */
+    .top_bar_right button:hover {
+      background-color: #ffffff2d;
+      transition: 0.25s linear;
+      transform: scale(1.1);
+      animation: rotate 2s infinite linear;
+      color: rgb(255, 255, 255);
+    }
+    /* right section of the screen  */
+  .rightDisplay{
+    background-color:#3a3333;
+    padding: 20px;
+    height: 100%;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    border-left: 2px solid #ffffff;
+    right: 0;
+    top: 100px;    
+    overflow-y: auto;
+    flex-direction: column;
+  }
+  .rightDisplay ul{
+    list-style: none;
+    gap: 10px;
+  }
+  .rightDisplay li{
+    margin: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.26);
+    border: 2px solid #ccc;
+  }
+  /* right section of the screen that contains a form  */
+  .rightBarForm{
+    background-color:#3a3333;
+    padding: 20px;
+    height: 100%;
+    width: 700px;
+    display: none;
+    position: fixed;
+    border-left: 2px solid #ffffff;
+    right: 0;
+    top: 100px;    
+    overflow-y: auto;
+    flex-direction: column;
+  }
+
+  .rightBarForm button{
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+  }
+  .rightBarForm button:hover{
+    background-color: #ffffff2d;
+    color: rgb(255, 255, 255);
+  }
+  .rightBarForm label{
+    width: fit-content;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  .rightBarForm input{
+    width: 300px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  /* settings page */
+  .settings{
+    display: none;
+  }
+  /* the recommendations tab in settings */
+  .recommendations{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    position: fixed;
+    top: 300px;
+    left: 300px;
+    right: 700px;
+    padding: 30px;
+    background-color:#3a3333;
+    overflow-y: auto;
+    border-bottom: 1px solid #ffffff;
+  }
+  .recommendations p{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+  }
+  /* delete all data section */
+  .master-delete{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: auto;
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    right: 700px;
+    padding: 30px;
+    background-color:#3a3333;
+    overflow-y: auto;
+    border-bottom: 1px solid #ffffff;
+  }
+  .master-delete label{
+    width: fit-content;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+  }
+  .master-delete button{
+    color: rgb(0, 0, 0);
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .master-delete button:hover{
+    background-color: #3a3333;
+    color: rgb(255, 255, 255);
+  }
