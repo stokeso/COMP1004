@@ -1,5 +1,5 @@
 # COMP1004 - Password Manager
-Developed By: Oliver Stokes std number: 10924183
+Developed By: Oliver Stokes student number: 10924183
 
 ## Description
 This is a secure and intuitive password manager built using **HTML** and **JavaScript**, styled with **CSS**.
